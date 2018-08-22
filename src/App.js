@@ -1,32 +1,16 @@
-import React, { Component } from 'react'
-import { hot } from 'react-hot-loader'
+import React, { Component } from 'react';
+import './App.css';
 
-import {
-    BrowserRouter as Router // HashRouter / BrowserRouter
-} from "react-router-dom"
-
-import { renderRoutes } from 'react-router-config'
-
-import "./styles.scss"
-
-import RouterLink from './views/RouterLink'
-import ContnetRouter from './views/Content/router'
-
-const routes = [...ContnetRouter]
+import Header from './Header'
 
 class App extends Component {
-    render() {
-        return (
-            <Router>
-                <div className="screen">
-                    <div className="slider-container">
-                        <RouterLink />
-                    </div>
-                    <div className="layout">{renderRoutes(routes)}</div>
-                </div>
-            </Router>
-        )
-    }
+  render() {
+    return (
+      <div className="App">
+        <Header/>
+      </div>
+    );
+  }
 }
 
-export default hot(module)(App)
+export default App;

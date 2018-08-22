@@ -1,0 +1,13 @@
+.content {
+    width: 1125px;
+    height: 200px
+}
+
+.transition {
+    transition: transform 1s ease;
+}
+
+.content .img {
+    height: 100%;
+    width: 375px;
+}
