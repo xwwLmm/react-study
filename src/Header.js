@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import './Header.css'
+import $style from './Header.css'
 
 import banner from './banner.png'
 import env from './env.png'
@@ -49,10 +49,10 @@ class Header extends Component {
         clearInterval(this.intervelId)
     }
     render() {
-        return <div className='Header'>
-            <div className={'content'}>
+        return <div>
+            <div className={$style.content}>
                 {
-                    this.state.imgs.map(img => (<img className={['img ' + (this.state.transform ? 'transition' : '')]} src={img.img} key={img.id} style={{transform: `translate3d(${this.state.transform}px,0, 0)`}}/>))
+                    this.state.imgs.map(img => (<img className={[$style.img + ' ' + (this.state.transform ? $style.transition : '')]} src={img.img} key={img.id} style={{transform: `translate3d(${this.state.transform}px,0, 0)`}}/>))
                 }
             </div>
         </div>
