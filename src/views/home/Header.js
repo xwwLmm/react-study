@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 
 import $style from './Header.css'
 
-import banner from './banner.png'
-import env from './env.png'
+import banner from '../../banner.png'
+import env from '../../env.png'
 
 class Header extends Component {
     constructor(props) {
@@ -52,7 +52,7 @@ class Header extends Component {
         return <div>
             <div className={$style.content}>
                 {
-                    this.state.imgs.map(img => (<img className={[$style.img + ' ' + (this.state.transform ? $style.transition : '')]} src={img.img} key={img.id} style={{transform: `translate3d(${this.state.transform}px,0, 0)`}}/>))
+                    this.state.imgs.map(img => (<img alt="404" className={[$style.img + ' ' + (this.state.transform ? $style.transition : '')]} src={img.img} key={img.id} style={{transform: `translate3d(${this.state.transform}px,0, 0)`}}/>))
                 }
             </div>
         </div>
